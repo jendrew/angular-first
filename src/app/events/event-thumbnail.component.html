@@ -1,0 +1,23 @@
+<div class ="well hoverwell thumbnail">
+    <h2>{{event?.name}}<span *ngIf="starred">*</span></h2>
+    <div>{{event?.date}}</div>
+    <div>{{event?.time}}</div>
+    <div [ngSwitch] = "event?.time">
+        <span *ngSwitchCase="'8:00 am'">Early start</span>
+        <span *ngSwitchDefault>Normal start</span>
+        <span *ngSwitchCase="'10:00 am'">Late start</span>
+
+    </div>
+    <div>Price: ${{event?.price}}</div>
+    <div *ngIf="event?.location">
+        <span>Address: {{event?.location.address}}</span>
+        <span class="pad-left">{{event?.location.city}}, {{event?.location.country}}</span>
+    </div>
+    <div *ngIf="event?.onlineUrl">
+        <span>Url: {{event?.onlineUrl}}</span>
+    </div>
+    <button class="btn btn-primary og-margin-top" (click) = "handleClickMe()">Click me!</button>
+    <button class="btn btn-primary og-margin-top" (click) = "giveStar()">Favourite</button>
+
+
+</div>
