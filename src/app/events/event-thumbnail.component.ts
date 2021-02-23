@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -8,25 +8,25 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 })
 
 export class EventThumbnailComponent {
-    @Input() event: any
-    @Output() eventClick = new EventEmitter()
-    someProperty:any = "some value"
-    starred: boolean = false
+    @Input() evel: any;
+    @Output() eventClick = new EventEmitter();
+    someProperty: any = 'some value';
+    starred: boolean = false;
 
     handleClickMe() {
-        console.log('ThumbnailComponent: Click!')
-        this.eventClick.emit(this.event.name)
+        console.log('ThumbnailComponent: Click!');
+        this.eventClick.emit(this.evel.name);
     }
 
     logFoo() {
-        console.log('foo')
+        console.log('foo');
     }
 
     giveStar() {
-        if (this.starred == false) {
-            this.starred = true
+        if (this.starred === false) {
+            this.starred = true;
         } else {
-            this.starred = false
+            this.starred = false;
         }
     }
 }

@@ -3,3 +3,6 @@
 .well div {color: #bbb; }
 .thumbnail {min-height: 280px;}
 .btn {margin-right: 10px;}
+.green {
+    color: #003300 !important;
+}

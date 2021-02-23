@@ -24,10 +24,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/ngf-bootstrap/dist/bootstrap.min.css"
+              "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
+              "node_modules/toastr/build/toastr.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
+              "mode_modules/toastr/build/toastr.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
