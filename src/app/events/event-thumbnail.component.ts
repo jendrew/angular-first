@@ -8,14 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class EventThumbnailComponent {
-    @Input() evel: any;
-    @Output() eventClick = new EventEmitter();
-    someProperty: any = 'some value';
+    @Input() event: any;
+    @Output() clickMeClicked = new EventEmitter();
     starred: boolean = false;
 
     handleClickMe() {
         console.log('ThumbnailComponent: Click!');
-        this.eventClick.emit(this.evel.name);
+        this.clickMeClicked.emit(this.event.name);
     }
 
     logFoo() {

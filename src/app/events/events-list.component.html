@@ -1,11 +1,17 @@
 <div>
     <h1>Upcoming Angular Events</h1>
     <hr/>
+  <div class="row text-center giant-header">
+    <div class="col-md-10">
+      <h1>{{currentlyClickedClickMeButton}}</h1>
+    </div>
+  </div>
     <div class="row">
-        <div class="col-md-5" *ngFor="let eve of events">
+        <div class="col-md-5" *ngFor="let e of events">
             <event-thumbnail
-            (click)="handleThumbnailClicked(eve.name)"
-            [evel] = "eve" ></event-thumbnail>
+            (click)="handleThumbnailClicked(e.name)"
+            (clickMeClicked)="handleClickMeClicked($event)"
+            [event]="e"></event-thumbnail>
         </div>
     </div>
 
