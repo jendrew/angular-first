@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { IEvent } from '.';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class EventThumbnailComponent {
-    @Input() event: any;
+    @Input() event: IEvent;
     @Output() clickMeClicked = new EventEmitter();
     starred: boolean = false;
 
