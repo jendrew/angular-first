@@ -1,6 +1,6 @@
 <div class ="well hoverwell thumbnail" [routerLink]="['/events', event.id]">
-    <h2>{{event?.name}}<span *ngIf="starred">*</span></h2>
-    <div>{{event?.date}}</div>
+    <h2>{{event?.name | uppercase}}<span *ngIf="starred">*</span></h2>
+    <div>Date: {{event?.date | date:'d-M-y'}}</div>
     <div [ngClass]="{green: event?.time === '8:00 am', bold: event?.time === '8:00 am'}"
             [ngSwitch]="event?.time">
         Time: {{event?.time}}
@@ -9,7 +9,7 @@
         <span *ngSwitchCase="'10:00 am'">(Late start)</span>
 
     </div>
-    <div>Price: ${{event?.price}}</div>
+    <div>Price: {{event?.price | currency:'USD'}}</div>
     <div *ngIf="event?.location">
         <span>Address: {{event?.location.address}}</span>
         <span class="pad-left">{{event?.location.city}}, {{event?.location.country}}</span>

@@ -9,7 +9,6 @@
     <div class="row">
         <div class="col-md-5" *ngFor="let e of events">
             <event-thumbnail
-            (click)="handleThumbnailClicked(e.name)"
             (clickMeClicked)="handleClickMeClicked($event)"
             [event]="e"></event-thumbnail>
         </div>

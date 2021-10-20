@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { IEvent } from '.';
+import { IEvent } from './shared';
 
 
 @Component({

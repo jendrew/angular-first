@@ -10,14 +10,20 @@ export class LoginComponent{
     userName
     password
     mouseoverLogin
+    loginInvalid = false;
     constructor(private authService: AuthService, private router:Router){
 
     }
 
     login(formValues) {
         console.log(formValues)
-        this.authService.loginUser(formValues.userName, formValues.password)
-        this.router.navigate(['events'])
+        this.authService.loginUser(formValues.userName, formValues.password).subscribe(res => {
+            if (!res) {
+                this.loginInvalid = true
+            } else {
+                this.router.navigate(['events'])
+            }
+        })
     }
 
     cancel() {
